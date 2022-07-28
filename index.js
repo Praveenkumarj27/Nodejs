@@ -4,8 +4,9 @@ const cors=require('cors');
 const mongodb=require('mongodb');
 const { response } = require('express');
 const mongoClient=mongodb.MongoClient;
+const dotenv=require("dotenv").config();
 // const url="mongodb://localhost:27017"
-const url="mongodb+srv://praveen:Praveen844@cluster0.uxvdm.mongodb.net/test"
+const url=process.env.DB
 
 //Middleware
 app.use(express.json());
